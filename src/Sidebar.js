@@ -12,11 +12,19 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import PersonIcon from '@material-ui/icons/Person';
 import DuoIcon from '@material-ui/icons/Duo';
 import PhoneIcon from '@material-ui/icons/Phone';
+import { useDispatch } from 'react-redux';
+import { openSendMessage } from './features/mailSlice';
 
 function Sidebar() {
+  const dispatch  = useDispatch();
+
   return (
     <div className='sidebar'>
-        <Button className='sidebar__compose' startIcon={<img src='https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png' alt='plus'/>}>
+        <Button 
+          className='sidebar__compose' 
+          startIcon={<img src='https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png' alt='plus'/>}
+          onClick={() => dispatch(openSendMessage())}
+        >
           Compose
         </Button>
 
