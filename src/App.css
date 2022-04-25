@@ -1,9 +1,10 @@
 .app {
-    height: 100vh;
+    height: 100vh !important;
 }
 
 .app__body {
+    /* overflow: scroll; */
     display: flex;
-    height: 100vh;
+    height: 90vh;
 
 }

@@ -56,7 +56,7 @@ function EmailList() {
           <EmailRow
             title="First Mail"
             subject="Hey this is the first mail"
-            description="Just for testing this is the first mail!!!"
+            description="Just for testing this is the first mail!!! To check overflow text we have to write more text"
             time="10pm"
             />
         </div>

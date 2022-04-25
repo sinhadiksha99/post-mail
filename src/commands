@@ -1,3 +1,4 @@
 yarn add @material-ui/core
 yarn add @material-ui/icon
-yarn add reacr-router-dom
+yarn add react-router-dom@5.2.0
+yarn add react-hook-form

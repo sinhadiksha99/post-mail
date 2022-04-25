@@ -1,6 +1,6 @@
 .emailList {
     flex: 1;
-    overflow: scroll;
+    overflow: scroll !important;
 }
 
 .emailList__settings {

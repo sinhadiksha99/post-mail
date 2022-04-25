@@ -5,11 +5,15 @@
 }
 
 .sidebar__compose {
+    font-size: .875rem !important;
+    letter-spacing: .25px !important;
+    font-weight: 500 !important;
+    font-family: 'Google Sans',Helvetica,Arial,sans-serif !important;
     margin-top: 15px !important;
     margin-left: 10px !important;
     margin-bottom: 15px !important;
-    text-transform: capitalize !important;
-    color: gray;
+    text-transform: none !important;
+    color: gray !important;
     padding: 15px !important;
     border-radius: 30px !important;
     box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
