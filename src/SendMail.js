@@ -38,24 +38,27 @@ function SendMail() {
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <input 
+          name='to'
           type='email' 
           placeholder='To'
-          {...register("to", { required: true })} 
+          ref={register({required: true})}
         />
         {errors.to && (<p className='sendMail__error'>To is required!</p>)}
         
         <input 
+          name='subject'
           type='text' 
           placeholder='Subject' 
-          {...register("subject", { required: true })} 
+          ref={register({required: true})} 
         />
         {errors.subject && (<p className='sendMail__error'>Subject is required!</p>)}
         
         <input 
+          name='message'
           className='sendMail__message' 
           type='text' 
           placeholder='Message...' 
-          {...register("message", { required: true })}
+          ref={register({required: true})}
         />
         {errors.message && (<p className='sendMail__error'>Message is required!</p>)}
 

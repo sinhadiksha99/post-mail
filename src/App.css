@@ -5,6 +5,6 @@
 .app__body {
     /* overflow: scroll; */
     display: flex;
-    height: 90vh;
+    height: 100vh;
 
 }
