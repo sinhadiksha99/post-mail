@@ -14,9 +14,14 @@ import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import EmailRow from './EmailRow';
 import { db } from './firebase';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
 
 function EmailList() {
   const [emails, setEmails] = useState([]);
+  const user = useSelector(selectUser);
+  console.log(user.email);
+  console.log(emails[0].to);
 
   useEffect(() => {
     db.collection('emails')
@@ -69,7 +74,9 @@ function EmailList() {
         </div>
 
         <div className='emailList__list'>
-          {emails.map(({id, data: { to, subject, message, timestamp}}) => (
+          {emails.filter(function (emails) {
+            return emails.data.to === user.email;
+          }).map(({id, data: { to, subject, message, timestamp}}) => (
             <EmailRow
               id={id}
               key={id}
