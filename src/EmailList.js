@@ -21,7 +21,7 @@ function EmailList() {
   const [emails, setEmails] = useState([]);
   const user = useSelector(selectUser);
   console.log(user.email);
-  console.log(emails[0].to);
+  console.log(emails[0]);
 
   useEffect(() => {
     db.collection('emails')
