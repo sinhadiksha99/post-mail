@@ -4,3 +4,10 @@ yarn add react-router-dom@5.2.0
 yarn add react-hook-form
 yarn add firebase
 yarn add firebase-tools
+
+TO DEPLOY ON FIREBASE:
+firebase login
+firebase init
+    Select Hosting option
+npm run build
+firebase deploy

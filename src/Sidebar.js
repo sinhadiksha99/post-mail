@@ -28,13 +28,13 @@ function Sidebar() {
           Compose
         </Button>
 
-        <SidebarOption Icon={InboxIcon} title="Inbox" number={54} selected={true}/>
-        <SidebarOption Icon={StarIcon} title="Starred" number={54}/>
-        <SidebarOption Icon={AccessTimeIcon} title="Snoozed" number={54}/>
-        <SidebarOption Icon={LabelImportantIcon} title="Important" number={54}/>
-        <SidebarOption Icon={NearMeIcon} title="Sent" number={54}/>
-        <SidebarOption Icon={NoteIcon} title="Drafts" number={54}/>
-        <SidebarOption Icon={ExpandMoreIcon} title="More" number={54}/>
+        <SidebarOption Icon={InboxIcon} title="Inbox" selected={true}/>
+        <SidebarOption Icon={StarIcon} title="Starred" />
+        <SidebarOption Icon={AccessTimeIcon} title="Snoozed" />
+        <SidebarOption Icon={LabelImportantIcon} title="Important" />
+        <SidebarOption Icon={NearMeIcon} title="Sent" />
+        <SidebarOption Icon={NoteIcon} title="Drafts" />
+        <SidebarOption Icon={ExpandMoreIcon} title="More" />
 
         <div className="sidebar__footer" >
           <div className='sidebar__footerIcons' >

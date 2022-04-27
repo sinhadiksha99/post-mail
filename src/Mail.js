@@ -11,10 +11,27 @@ import './Mail.css';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectOpenMail } from './features/mailSlice';
+import { db } from './firebase';
 
 function Mail() {
   const history = useHistory();
   const selectedMail = useSelector(selectOpenMail);
+
+  const handleDel = () => {
+    db.collection('emails')
+    .doc(selectedMail.id)
+    .delete()
+    .then(
+      () => {
+        console.log("Document successfully deleted!");
+        history.push("/");
+      },
+      (error) => {
+        console.error("Error removing document: ", error);
+      }
+    );
+
+  }
 
   console.log('Mail');
 
@@ -29,7 +46,7 @@ function Mail() {
               <MoveToInboxIcon />
             </IconButton>
             <IconButton>
-              <DeleteIcon />
+              <DeleteIcon onClick={handleDel} />
             </IconButton>
         </div>
 
